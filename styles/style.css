@@ -1,0 +1,24 @@
+:root {
+    --columns:1;
+    --rows:1;
+}
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+#gridDiv{
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(var(--columns),1fr); /*or fr*/
+    grid-template-rows: repeat(var(--rows),1fr);
+    grid-auto-flow: row;
+
+}
+
+.gridBox {
+    border: 1px solid gray;
+    text-align: center;
+}
