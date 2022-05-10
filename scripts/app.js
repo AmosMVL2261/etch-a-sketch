@@ -1,7 +1,7 @@
-const mode = "multicolor";
+let mode = "multicolor";
 const container = document.getElementById("gridDiv");
 
-//we add class gridbox just for css, while, id is for individual color change
+//Added class gridbox to divs just for css, while, id is for individual color change
 function createGrid(columns, rows){
     container.style.setProperty('--rows', rows);
     container.style.setProperty('--columns', columns);
@@ -15,7 +15,7 @@ function createGrid(columns, rows){
 createGrid(10,10);
 
 //Create addEventListener for each div created
-var items = document.getElementsByClassName('gridBox');
+let items = document.getElementsByClassName('gridBox');
 for (var i = 0; i < items.length; i++) {
   items[i].addEventListener('mouseover', selection);
 }
@@ -42,6 +42,16 @@ function multiColor(identifier) {
     box.style.backgroundColor='rgb(' + red + ',' + green + ',' + blue + ')';
 }
 
+
+function paintWhite(){
+    let items = document.getElementsByClassName('gridBox');
+    for (var i = 0; i < items.length; i++) {
+      items[i].style.backgroundColor="white";
+    } 
+    console.log("done");
+    mode = "black";
+}
+
 //User selection
 function selection(){
     switch(mode){
@@ -51,6 +61,8 @@ function selection(){
         case "multicolor":
             multiColor(this.id);
             break;
+        case "erase":
+            paintWhite();
         default:
             paintBlack(this.id);
     }
