@@ -8,9 +8,19 @@
     padding: 0px;
 }
 
+body{
+    background-color: lightslategrey;
+    font-family:'Times New Roman', Times, serif;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 10px;
+}
+
 #gridDiv{
     width: 500px;
     height: 500px;
+    background-color: white;
     display: grid;
     grid-template-columns: repeat(var(--columns),1fr); /*or fr*/
     grid-template-rows: repeat(var(--rows),1fr);
@@ -18,7 +28,57 @@
 
 }
 
+/*Style for each div created*/
 .gridBox {
     border: 1px solid whitesmoke;
     text-align: center;
+}
+
+button{
+    height: 50px;
+    width: 150px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+/*Buttons hover style*/
+button#buttonBlack:hover {
+    border: 5px solid rgb(0, 0, 0);
+}
+
+button#buttonColor:hover {
+        background: 
+          linear-gradient(whitesmoke 0 0) padding-box,
+          linear-gradient(to right, #ff0000, #3835fb) border-box;
+        border: 5px solid transparent;
+        border-radius: 10px;
+}
+  
+button#buttonReset:hover {
+    border: 5px solid rgb(255, 0, 0);
+}
+
+button#newSize:hover {
+    border: 5px solid rgb(20, 202, 178);
+}
+
+h1{
+    font-size: 3em;
+}
+
+h2{
+    text-align: center;
+    font-size: 2em;
+}
+
+p,span{
+    text-align: center;
+    font-size: 20px;
+}
+
+.middle {
+    display: flex;
+    justify-content: center; 
+    gap: 30px;
 }
