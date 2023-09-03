@@ -1,6 +1,16 @@
 # Etch a sketch
 
-Game that allows the user paint the squares when you hover the mouse in them. The user can paint the squares in two different modes: black and random color. Also, the grid size can be change to any "n x n" size that the user wants.
+Game project that allows the user to paint the squares anywhere when you hover the mouse in the blocks. 
+
+The player can paint the squares in two different colors: black and rainbow (random colors). 
+
+The game allows to change the grid size to any "n x n" size that the user wants.
+
+The grid can be reset anytime with the reset button, thanks to this, the player can make unlimited pictures only limitated by the user's imagination.
+
+## Screenshots
+
+![alt text](./screenshots/aplication.jpg)
 
 ## Technologies used in this project
 
